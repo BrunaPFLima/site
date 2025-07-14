@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo de Bruna</title>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         :root {
             --cor-primaria: #000000;
@@ -29,51 +28,43 @@
             font-family: var(--fonte-secundaria);
         }
 
-        .cabecalho{
-            padding: 2% 0% 0% 15%;
+        .cabecalho {
+            padding: 20px;
+            background-color: var(--cor-primaria);
+            text-align: center;
         }
 
-        .cabecalho__menu{
+        .cabecalho__menu {
             display: flex;
-            gap: 100px;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        .cabecalho__menu__link{
-            font-family: var(--fonte-secundaria);
-            font-size: 1.5rem;
-            font-weight: 700;
+        .cabecalho__menu__link {
+            font-size: 1.2rem;
+            font-weight: bold;
             color: var(--cor-terciaria);
             text-decoration: none;
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            width: 90%;
+            margin: auto;
             padding: 20px 0;
         }
 
-        .header-info {
+        .perfil {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
             gap: 20px;
         }
 
-        h1 {
-            font-family: var(--fonte-primaria);
-            font-size: 3rem;
-            color: var(--cor-terciaria);
-        }
-
-        p.subtitle {
-            font-size: 1.5rem;
-            color: var(--cor-secundaria);
+        .perfil-info {
+            flex: 1;
+            min-width: 250px;
         }
 
         .perfil-imagem {
@@ -81,216 +72,143 @@
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--cor-terciaria);
+            border: 3px solid var(--cor-terciaria);
+            margin: auto;
         }
 
-        h2 {
-            font-size: 2rem;
+        h1 {
             font-family: var(--fonte-primaria);
+            font-size: 2.5rem;
             color: var(--cor-terciaria);
+            text-align: center;
             margin-bottom: 10px;
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .habilidades .skill {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 8px 0;
-            font-size: 1.5rem;
-        }
-
-        .habilidades i {
-            color: var(--cor-terciaria);
-        }
-
-        footer {
-            background-color: var(--cor-terciaria);
-            color: var(--cor-primaria);
+        p.subtitle {
             text-align: center;
-            padding: 20px;
             font-size: 1.2rem;
         }
 
-        footer a {
-            color: var(--cor-primaria);
-            text-decoration: none;
+        section {
+            margin: 30px 0;
         }
 
-        footer a:hover {
-            color: var(--cor-hover);
+        h2 {
+            font-size: 1.8rem;
+            color: var(--cor-terciaria);
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--cor-terciaria);
+            padding-bottom: 5px;
         }
 
-        .social-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-buttons input {
-            padding: 10px 20px;
+        section p {
             font-size: 1rem;
-            background-color: var(--cor-terciaria);
-            color: var(--cor-primaria);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .social-buttons input:hover {
-            background-color: var(--cor-hover);
+            line-height: 1.6;
+            margin-top: 10px;
         }
 
         .social-links {
-            margin-top: 20px;
             text-align: center;
         }
 
-        .cabecalho__menu {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
         }
 
-        .cabecalho__menu__link {
-            color: var(--cor-secundaria);
-            text-decoration: none;
-            font-size: 1.2rem;
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--cor-terciaria);
+            color: var(--cor-primaria);
+            font-weight: bold;
         }
 
-        .cabecalho__menu__link:hover {
-            color: var(--cor-terciaria);
-        }
+        /* RESPONSIVIDADE */
+        @media (max-width: 600px) {
+            .perfil {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-        .apresentacao__links {
-            display: flex;
-            flex-direction: column; /* Organiza o título em cima e os links abaixo */
-            justify-content: center;
-            align-items: center;
-            gap: 16px; /* Espaçamento entre o título e os links */
+            h1 {
+                font-size: 2rem;
+            }
+
+            p.subtitle {
+                font-size: 1rem;
+            }
+
+            .cabecalho__menu {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
-        
-        .apresentacao__links__subtitulo {
-            font-family: var(--fonte-primaria);
-            font-weight: 400;
-            font-size: 1.5rem;
-            text-align: center; /* Centraliza o subtítulo */
-        }
-        
-        .apresentacao__links__navegacao {
-            display: flex; /* Exibe os links lado a lado */
-            gap: 16px; /* Espaçamento entre os links */
-            justify-content: center; /* Alinha os links no centro */
-            border: 2px solid var(--cor-terciaria);
-            padding: 12px 24px; /* Ajusta o padding dos links */
-            border-radius: 8px;
-        }
-        
-        .apresentacao__links__link {
-            padding: 10px 20px; /* Ajusta o tamanho dos links */
-            text-decoration: none;
-            color: var(--cor-secundaria); /* Cor do texto */
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .apresentacao__links__link:hover {
-            background-color: var(--cor-hover); /* Cor de fundo no hover */
-        }
-        
-        
-        
-        
-        
     </style>
 </head>
-    
-
 <body>
-
     <header class="cabecalho">
         <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
-            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+            <a class="cabecalho__menu__link" href="#">Home</a>
+            <a class="cabecalho__menu__link" href="#">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="#">Currículo</a>
         </nav>
     </header>
-    
-    <div class="container">
-        <header>
-            <div class="header-info">
-                <img src="./assets/img1.jpeg" alt="Foto de Bruna" class="perfil-imagem">
-                <div>
-                    <h1>Bruna Lima</h1>
-                    <p class="subtitle">Desenvolvedora Back-End | Em Transição de Carreira</p>
-                </div>
-            </div>
-        </header>
 
-        <section class="section info">
+    <div class="container">
+        <div class="perfil">
+            <img src="./assets/img1.jpeg" alt="Foto de Bruna" class="perfil-imagem">
+            <div class="perfil-info">
+                <h1>Bruna Lima</h1>
+                <p class="subtitle">Desenvolvedora Back-End | Em Transição de Carreira</p>
+            </div>
+        </div>
+
+        <section>
             <h2>Informações Pessoais</h2>
             <p><strong>Idade:</strong> 34 anos</p>
             <p><strong>Formação:</strong> Análise e Desenvolvimento de Sistemas</p>
             <p><strong>Profissão:</strong> Desenvolvedora Back-End</p>
-        </section> 
+        </section>
 
-    
-        <section class="section experiencia">
+        <section>
             <h2>Experiência Acadêmica</h2>
-            <p>Desenvolvedora Back-end | API REST para Sistema de Estacionamento.<br>
-                Período: 2024
-                Desenvolvi uma API REST em Java com Spring Boot para gerenciar reservas,
-                 pagamentos e controle de vagas de estacionamento. Integrei com banco de dados e implementei autenticação JWT para segurança. Apliquei boas práticas de design e desenvolvi um sistema escalável e seguro, 
-                implantado na nuvem.</p>
+            <p>Desenvolvedora Back-end | API REST para Sistema de Estacionamento (2024).<br>
+            Desenvolvi uma API REST em Java com Spring Boot para gerenciar reservas, pagamentos e controle de vagas. Integrei com banco de dados, autenticação JWT e deploy na nuvem.</p>
         </section>
 
-        <section class="section projetos">
+        <section>
             <h2>Projetos Relevantes</h2>
-            <p>Desenvolvi diversos projetos, incluindo uma API REST para sistema de estacionamento 
-                com Spring Boot, um sistema de microsserviços para transporte de carga usando Docker,
-                 e um catálogo de produtos aplicando padrões de projeto.
-
-            </p>
-           
+            <p>● Sistema de estacionamento (Spring Boot)<br>
+               ● Microsserviços com Docker para transporte de carga<br>
+               ● Catálogo de produtos com padrões de projeto</p>
         </section>
 
-        <section class="section cursos">
+        <section>
             <h2>Cursos e Certificados</h2>
-            <p>Java Completo - Dio Bootcamp</p>
-            <p>API REST com Spring Boot - Dio</p>
-            <p>Bootcamp Azure Advanced</p>
-            <p>Especificação Java - Alura </p>
+            <p>● Java Completo - Dio Bootcamp<br>
+               ● API REST com Spring Boot - Dio<br>
+               ● Bootcamp Azure Advanced<br>
+               ● Especificação Java - Alura</p>
         </section>
 
         <section class="social-links">
-            <div class="social-buttons">
-                <div class="apresentacao__links">
-
-                    <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
-
-                    <div class="apresentacao__links__navegacao">
-
-                        <a href="https://www.linkedin.com/in/bruna-lima-205360144/">
-                            <img src="./assets/linkedin.png"></a>
-    
-                        <a href="https://github.com/BrunaPFLima">
-                            <img src="./assets/github.png"></a>
-                    </div>
-
-            </div>
-        
+            <h2>Acesse minhas redes</h2>
+            <a href="https://www.linkedin.com/in/bruna-lima-205360144/" target="_blank">
+                <img src="./assets/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/BrunaPFLima" target="_blank">
+                <img src="./assets/github.png" alt="GitHub">
+            </a>
         </section>
-        <br>
-        
-
-        <footer>
-            <p>Desenvolvido por Bruna Lima</p>
-        </footer>
     </div>
+
+    <footer>
+        Desenvolvido por Bruna Lima
+    </footer>
 </body>
 </html>
+
+
