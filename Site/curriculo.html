@@ -29,16 +29,16 @@
             font-family: var(--fonte-secundaria);
         }
 
-        .cabecalho{
+        .cabecalho {
             padding: 2% 0% 0% 15%;
         }
 
-        .cabecalho__menu{
+        .cabecalho__menu {
             display: flex;
             gap: 100px;
         }
 
-        .cabecalho__menu__link{
+        .cabecalho__menu__link {
             font-family: var(--fonte-secundaria);
             font-size: 1.5rem;
             font-weight: 700;
@@ -151,65 +151,84 @@
             text-align: center;
         }
 
-        .cabecalho__menu {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .cabecalho__menu__link {
-            color: var(--cor-secundaria);
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        .cabecalho__menu__link:hover {
-            color: var(--cor-terciaria);
-        }
-
         .apresentacao__links {
             display: flex;
-            flex-direction: column; /* Organiza o título em cima e os links abaixo */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 16px; /* Espaçamento entre o título e os links */
+            gap: 16px;
         }
-        
+
         .apresentacao__links__subtitulo {
             font-family: var(--fonte-primaria);
             font-weight: 400;
             font-size: 1.5rem;
-            text-align: center; /* Centraliza o subtítulo */
+            text-align: center;
         }
-        
+
         .apresentacao__links__navegacao {
-            display: flex; /* Exibe os links lado a lado */
-            gap: 16px; /* Espaçamento entre os links */
-            justify-content: center; /* Alinha os links no centro */
+            display: flex;
+            gap: 16px;
+            justify-content: center;
             border: 2px solid var(--cor-terciaria);
-            padding: 12px 24px; /* Ajusta o padding dos links */
+            padding: 12px 24px;
             border-radius: 8px;
         }
-        
-        .apresentacao__links__link {
-            padding: 10px 20px; /* Ajusta o tamanho dos links */
-            text-decoration: none;
-            color: var(--cor-secundaria); /* Cor do texto */
-            font-size: 1.2rem;
-            font-weight: 600;
+
+        .apresentacao__links__link img {
+            width: 32px;
+            height: 32px;
         }
-        
-        .apresentacao__links__link:hover {
-            background-color: var(--cor-hover); /* Cor de fundo no hover */
+
+        /* RESPONSIVIDADE */
+        @media screen and (max-width: 768px) {
+            .cabecalho {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .cabecalho__menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .header-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .perfil-imagem {
+                width: 150px;
+                height: 150px;
+            }
+
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .apresentacao__links__navegacao {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .apresentacao__links__link img {
+                width: 40px;
+                height: 40px;
+            }
         }
-        
-        
-        
-        
-        
     </style>
 </head>
-    
 
 <body>
 
@@ -239,24 +258,16 @@
             <p><strong>Profissão:</strong> Desenvolvedora Back-End</p>
         </section> 
 
-    
         <section class="section experiencia">
             <h2>Experiência Acadêmica</h2>
             <p>Desenvolvedora Back-end | API REST para Sistema de Estacionamento.<br>
-                Período: 2024
-                Desenvolvi uma API REST em Java com Spring Boot para gerenciar reservas,
-                 pagamentos e controle de vagas de estacionamento. Integrei com banco de dados e implementei autenticação JWT para segurança. Apliquei boas práticas de design e desenvolvi um sistema escalável e seguro, 
-                implantado na nuvem.</p>
+            Período: 2024<br>
+            Desenvolvi uma API REST em Java com Spring Boot para gerenciar reservas, pagamentos e controle de vagas. Integrei com banco de dados e implementei autenticação JWT. Apliquei boas práticas de design e implantei o sistema na nuvem.</p>
         </section>
 
         <section class="section projetos">
             <h2>Projetos Relevantes</h2>
-            <p>Desenvolvi diversos projetos, incluindo uma API REST para sistema de estacionamento 
-                com Spring Boot, um sistema de microsserviços para transporte de carga usando Docker,
-                 e um catálogo de produtos aplicando padrões de projeto.
-
-            </p>
-           
+            <p>Desenvolvi projetos como: sistema de estacionamento com Spring Boot, microsserviços com Docker para transporte de carga, e um catálogo de produtos com padrões de projeto.</p>
         </section>
 
         <section class="section cursos">
@@ -264,29 +275,24 @@
             <p>Java Completo - Dio Bootcamp</p>
             <p>API REST com Spring Boot - Dio</p>
             <p>Bootcamp Azure Advanced</p>
-            <p>Especificação Java - Alura </p>
+            <p>Especificação Java - Alura</p>
         </section>
 
         <section class="social-links">
-            <div class="social-buttons">
-                <div class="apresentacao__links">
-
-                    <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
-
-                    <div class="apresentacao__links__navegacao">
-
-                        <a href="https://www.linkedin.com/in/bruna-lima-205360144/">
-                            <img src="./assets/linkedin.png"></a>
-    
-                        <a href="https://github.com/BrunaPFLima">
-                            <img src="./assets/github.png"></a>
-                    </div>
-
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
+                <div class="apresentacao__links__navegacao">
+                    <a href="https://www.linkedin.com/in/bruna-lima-205360144/" class="apresentacao__links__link" target="_blank">
+                        <img src="./assets/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/BrunaPFLima" class="apresentacao__links__link" target="_blank">
+                        <img src="./assets/github.png" alt="GitHub">
+                    </a>
+                </div>
             </div>
-        
         </section>
+
         <br>
-        
 
         <footer>
             <p>Desenvolvido por Bruna Lima</p>
