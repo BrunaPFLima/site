@@ -1,214 +1,134 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo de Bruna</title>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cor-primaria: #000000;
-            --cor-secundaria: #F6F6F6;
-            --cor-terciaria: #22D4FD;
-            --cor-hover: #272727;
+:root {
+  --cor-primaria: #000000;
+  --cor-secundaria: #f6f6f6;
+  --cor-terciaria: #22d4fd;
+  --cor-hover: #272727;
 
-            --fonte-primaria: 'Krona One', sans-serif;
-            --fonte-secundaria: 'Montserrat', sans-serif;
-        }
+  --fonte-primaria: 'Krona One', sans-serif;
+  --fonte-secundaria: 'Montserrat', sans-serif;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            background-color: var(--cor-primaria);
-            color: var(--cor-secundaria);
-            font-family: var(--fonte-secundaria);
-        }
+body {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-secundaria);
+}
 
-        .cabecalho {
-            padding: 20px;
-            background-color: var(--cor-primaria);
-            text-align: center;
-        }
+.cabecalho {
+  padding: 20px;
+  background-color: var(--cor-primaria);
+  text-align: center;
+}
 
-        .cabecalho__menu {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+.cabecalho__menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
-        .cabecalho__menu__link {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--cor-terciaria);
-            text-decoration: none;
-        }
+.cabecalho__menu__link {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--cor-terciaria);
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px 0;
-        }
+.cabecalho__menu__link:hover {
+  color: var(--cor-secundaria);
+}
 
-        .perfil {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+.apresentacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
 
-        .perfil-info {
-            flex: 1;
-            min-width: 250px;
-        }
+.apresentacao__conteudo {
+  flex: 1;
+  min-width: 300px;
+}
 
-        .perfil-imagem {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--cor-terciaria);
-            margin: auto;
-        }
+.apresentacao__conteudo__titulo {
+  font-family: var(--fonte-primaria);
+  font-size: 2rem;
+  color: var(--cor-terciaria);
+  margin-bottom: 20px;
+}
 
-        h1 {
-            font-family: var(--fonte-primaria);
-            font-size: 2.5rem;
-            color: var(--cor-terciaria);
-            text-align: center;
-            margin-bottom: 10px;
-        }
+.apresentacao__conteudo__texto {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
 
-        p.subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-        }
+.apresentacao__imagem {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  border: 3px solid var(--cor-terciaria);
+}
 
-        section {
-            margin: 30px 0;
-        }
+.apresentacao__links {
+  margin-top: 20px;
+}
 
-        h2 {
-            font-size: 1.8rem;
-            color: var(--cor-terciaria);
-            margin-bottom: 10px;
-            border-bottom: 1px solid var(--cor-terciaria);
-            padding-bottom: 5px;
-        }
+.apresentacao__links__subtitulo {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
 
-        section p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-top: 10px;
-        }
+.apresentacao__links__navegacao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 15px;
+  color: var(--cor-terciaria);
+  text-decoration: none;
+  font-weight: bold;
+}
 
-        .social-links {
-            text-align: center;
-        }
+.apresentacao__links__navegacao img {
+  width: 24px;
+  height: 24px;
+}
 
-        .social-links img {
-            width: 40px;
-            height: 40px;
-            margin: 10px;
-        }
+.rodape {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--cor-terciaria);
+  color: var(--cor-primaria);
+  font-weight: bold;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--cor-terciaria);
-            color: var(--cor-primaria);
-            font-weight: bold;
-        }
+/* Responsividade */
+@media (max-width: 768px) {
+  .apresentacao {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
 
-        /* RESPONSIVIDADE */
-        @media (max-width: 600px) {
-            .perfil {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+  .apresentacao__imagem {
+    max-width: 250px;
+  }
 
-            h1 {
-                font-size: 2rem;
-            }
+  .cabecalho__menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
 
-            p.subtitle {
-                font-size: 1rem;
-            }
-
-            .cabecalho__menu {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="#">Home</a>
-            <a class="cabecalho__menu__link" href="#">Sobre mim</a>
-            <a class="cabecalho__menu__link" href="#">Currículo</a>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="perfil">
-            <img src="./assets/img1.jpeg" alt="Foto de Bruna" class="perfil-imagem">
-            <div class="perfil-info">
-                <h1>Bruna Lima</h1>
-                <p class="subtitle">Desenvolvedora Back-End | Em Transição de Carreira</p>
-            </div>
-        </div>
-
-        <section>
-            <h2>Informações Pessoais</h2>
-        
-            <p><strong>Formação:</strong> Análise e Desenvolvimento de Sistemas</p>
-            <p><strong>Profissão:</strong> Desenvolvedora Back-End</p>
-        </section>
-
-        <section>
-            <h2>Experiência Acadêmica</h2>
-            <p>Desenvolvedora Back-end | API REST para Sistema de Estacionamento (2024).<br>
-            Desenvolvi uma API REST em Java com Spring Boot para gerenciar reservas, pagamentos e controle de vagas. Integrei com banco de dados, autenticação JWT e deploy na nuvem.</p>
-        </section>
-
-        <section>
-            <h2>Projetos Relevantes</h2>
-            <p>● Sistema de estacionamento (Spring Boot)<br>
-               ● Microsserviços com Docker para transporte de carga<br>
-               ● Catálogo de produtos com padrões de projeto</p>
-        </section>
-
-        <section>
-            <h2>Cursos e Certificados</h2>
-            <p>● Java Completo - Dio Bootcamp<br>
-               ● API REST com Spring Boot - Dio<br>
-               ● Bootcamp Azure Advanced<br>
-               ● Especificação Java - Alura</p>
-        </section>
-
-        <section class="social-links">
-            <h2>Acesse minhas redes</h2>
-            <a href="https://www.linkedin.com/in/bruna-lima-205360144/" target="_blank">
-                <img src="./assets/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/BrunaPFLima" target="_blank">
-                <img src="./assets/github.png" alt="GitHub">
-            </a>
-        </section>
-    </div>
-
-    <footer>
-        Desenvolvido por Bruna Lima
-    </footer>
-</body>
-</html>
 
 
